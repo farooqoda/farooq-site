@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Muhammad Farooq Iqbal</title>
+<meta name="description" content="Strategy and build from the same person. Growth advisory since 2022, AI systems and automation since. Based in Mississauga, Ontario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================================
+   Muhammad Farooq Iqbal — site stylesheet
+   Design system carried from the existing portfolio: a technical-drawing
+   aesthetic. Sheet numbers, mono labels, hairline rules. It signals
+   engineering discipline without having to claim it — and nothing else in
+   this market looks like it.
+   ========================================================================== */
+
+:root{
+  --ink:#16233F;
+  --ink-2:#2A3A5C;
+  --paper:#F7FAFC;
+  --card:#FFFFFF;
+  --line:#C9D6E6;
+  --line-soft:#DEE7F0;
+  --muted:#56698A;
+  --teal:#1F6E63;
+  --teal-soft:#E4F0EE;
+  --signal:#E1591F;
+
+  --sans:'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --display:'Space Grotesk', var(--sans);
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+
+  --gut:clamp(20px, 5vw, 64px);
+  --max:1180px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- the blueprint label: used everywhere ---------- */
+.lab{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:500;
+}
+.lab.teal{color:var(--teal)}
+
+/* ---------- skip link ---------- */
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--ink);color:#fff;padding:12px 18px;
+  font-family:var(--mono);font-size:12px;
+}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- header ---------- */
+header{
+  border-bottom:1px solid var(--line);
+  background:rgba(247,250,252,.92);
+  backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:40;
+}
+.nav{
+  display:flex;align-items:center;gap:28px;
+  padding:16px var(--gut);max-width:var(--max);margin:0 auto;
+}
+.mark{
+  font-family:var(--mono);font-size:13px;font-weight:500;
+  letter-spacing:.04em;color:var(--ink);text-decoration:none;
+  margin-right:auto;display:flex;align-items:baseline;gap:9px;
+}
+.mark b{font-weight:500;color:var(--teal)}
+.mark span{color:var(--muted);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.nav a.n{
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  padding-bottom:3px;border-bottom:1px solid transparent;
+}
+.nav a.n:hover,.nav a.n[aria-current="page"]{color:var(--ink);border-bottom-color:var(--signal)}
+.nav a.n:focus-visible,a:focus-visible,button:focus-visible,
+input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--teal);outline-offset:3px;border-radius:2px;
+}
+.nav-cta{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--ink);color:#fff;text-decoration:none;
+  padding:10px 16px;border-radius:3px;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--teal)}
+@media (max-width:800px){
+  .nav{gap:16px;flex-wrap:wrap}
+  .nav a.n{font-size:11px}
+  .mark span{display:none}
+}
+
+/* ---------- sheet rule: the signature device ---------- */
+.sheet{
+  display:flex;align-items:center;gap:14px;
+  padding:22px 0 0;border-top:1px solid var(--line);
+  margin-top:0;
+}
+.sheet .lab{white-space:nowrap}
+.sheet .rule{flex:1;height:1px;background:var(--line)}
+
+/* ---------- sections ---------- */
+section{padding:clamp(56px,8vw,104px) 0}
+section.tight{padding:clamp(40px,6vw,68px) 0}
+.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band-ink{background:var(--ink);color:#EAF0F6}
+.band-ink .lab{color:#8FA3BE}
+.band-ink h2,.band-ink h3{color:#fff}
+.band-ink p{color:#C4D2E2}
+
+/* ---------- type ---------- */
+h1{
+  font-family:var(--display);
+  font-size:clamp(32px,5.6vw,58px);
+  line-height:1.06;letter-spacing:-.03em;font-weight:500;
+}
+h2{
+  font-family:var(--display);
+  font-size:clamp(24px,3.4vw,36px);
+  line-height:1.16;letter-spacing:-.02em;font-weight:500;
+}
+h3{
+  font-family:var(--display);
+  font-size:clamp(18px,2.2vw,22px);
+  line-height:1.25;letter-spacing:-.01em;font-weight:500;
+}
+p{max-width:64ch}
+.lede{font-size:clamp(17px,2.1vw,20px);line-height:1.6;color:var(--ink-2);max-width:60ch}
+.sub{color:var(--muted)}
+a{color:var(--teal)}
+strong{font-weight:600}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(56px,9vw,116px) 0 clamp(44px,6vw,72px)}
+.hero h1{max-width:17ch;margin:20px 0 22px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero .lede{margin-bottom:32px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-block;font-family:var(--mono);font-size:12.5px;
+  letter-spacing:.07em;text-transform:uppercase;text-decoration:none;
+  padding:14px 24px;border-radius:3px;border:1px solid var(--ink);
+  background:var(--ink);color:#fff;cursor:pointer;
+}
+.btn:hover{background:var(--teal);border-color:var(--teal)}
+.btn.ghost{background:none;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.light:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+
+/* ---------- grids ---------- */
+.grid{display:grid;gap:clamp(20px,3vw,34px)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.split{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:start}
+@media (max-width:900px){
+  .g3,.g4,.split{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr}
+}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:4px;padding:clamp(22px,3vw,32px);
+}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.5px}
+.card .lab{display:block;margin-bottom:14px}
+.card ul{margin:16px 0 0;padding-left:0;list-style:none}
+.card li{
+  font-size:14.5px;color:var(--ink-2);padding:7px 0 7px 20px;
+  position:relative;border-top:1px solid var(--line-soft);
+}
+.card li:first-child{border-top:0}
+.card li::before{
+  content:"";position:absolute;left:2px;top:16px;
+  width:6px;height:1px;background:var(--signal);
+}
+
+/* numbered step */
+.step{position:relative;padding-left:52px}
+.step .n{
+  position:absolute;left:0;top:2px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.1em;
+  color:var(--signal);
+}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{font-size:15px;color:var(--ink-2);max-width:44ch}
+
+/* ---------- stat / figure ---------- */
+.fig{border-left:2px solid var(--signal);padding-left:18px}
+.fig .v{
+  font-family:var(--mono);font-size:clamp(26px,3.6vw,38px);
+  font-weight:500;letter-spacing:-.02em;line-height:1.1;
+}
+.fig .k{font-size:14px;color:var(--muted);margin-top:6px;max-width:30ch}
+
+/* ---------- message demo ---------- */
+.thread{
+  background:var(--card);border:1px solid var(--line);border-radius:4px;
+  padding:20px;display:flex;flex-direction:column;gap:10px;
+}
+.thread .hd{
+  display:flex;align-items:center;gap:8px;
+  padding-bottom:14px;margin-bottom:4px;border-bottom:1px solid var(--line-soft);
+}
+.msg{max-width:80%;padding:11px 15px;border-radius:12px;font-size:15px;line-height:1.5}
+.msg.them{background:#EDF2F7;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.us{background:var(--teal);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg .t{
+  display:block;font-family:var(--mono);font-size:10px;
+  opacity:.6;margin-top:6px;letter-spacing:.06em;
+}
+
+/* ---------- table ---------- */
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:0 14px 10px 0;font-weight:500;
+  border-bottom:1px solid var(--line);
+}
+td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line-soft);font-size:15px;vertical-align:top}
+td:first-child{font-weight:500}
+tr:last-child td{border-bottom:0}
+
+/* ---------- timeline ---------- */
+.tl{border-left:1px solid var(--line);padding-left:26px;margin-left:6px}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-31px;top:7px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--teal);
+}
+.tl-item .when{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.tl-item h3{font-size:17px;margin:4px 0 2px}
+.tl-item .org{font-size:14.5px;color:var(--teal);margin-bottom:7px}
+.tl-item p{font-size:15px;color:var(--ink-2);max-width:58ch}
+
+/* ---------- forms ---------- */
+.field{margin-bottom:20px}
+.field label{display:block;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);
+  border-radius:3px;font-family:var(--sans);font-size:15.5px;
+  color:var(--ink);background:var(--card);
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal)}
+.field .hint{font-size:13px;color:var(--muted);margin-top:6px}
+.consent{display:flex;gap:11px;align-items:flex-start;margin:22px 0}
+.consent input{width:16px;height:16px;margin-top:3px;flex:0 0 16px}
+.consent label{font-size:13.5px;color:var(--muted);line-height:1.5;max-width:58ch}
+.form-note{
+  background:var(--teal-soft);border-left:2px solid var(--teal);
+  padding:15px 18px;font-size:14.5px;color:var(--ink-2);margin-bottom:26px;
+}
+
+/* ---------- faq ---------- */
+details{border-bottom:1px solid var(--line-soft);padding:18px 0}
+details:first-of-type{border-top:1px solid var(--line-soft)}
+summary{
+  font-family:var(--display);font-size:17px;font-weight:500;
+  cursor:pointer;list-style:none;display:flex;gap:14px;align-items:flex-start;
+}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";color:var(--signal);font-family:var(--mono);font-size:16px;line-height:1.4}
+details[open] summary::before{content:"–"}
+details p{margin:12px 0 0 28px;font-size:15.5px;color:var(--ink-2)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--card)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media (max-width:800px){.foot{grid-template-columns:1fr}}
+.foot h4{font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:14px}
+.foot a{display:block;color:var(--ink-2);text-decoration:none;font-size:15px;padding:4px 0}
+.foot a:hover{color:var(--teal)}
+.sig{font-size:14.5px;color:var(--ink-2);line-height:1.7}
+.sig strong{display:block;color:var(--ink);font-size:15.5px}
+.foot-base{
+  margin-top:34px;padding-top:20px;border-top:1px solid var(--line-soft);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em;
+}
+
+/* ---------- utility ---------- */
+.mb0{margin-bottom:0}
+.mb8{margin-bottom:8px}
+.mb16{margin-bottom:16px}
+.mb24{margin-bottom:24px}
+.mb32{margin-bottom:32px}
+.mt24{margin-top:24px}
+.mt32{margin-top:32px}
+.center{text-align:center}
+.narrow{max-width:66ch}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="nav">
+    <a class="mark" href="index.html"><b>FI</b> /<span>Farooq Iqbal</span></a>
+    <a class="n" href="index.html">Home</a>
+    <a class="n" href="systems.html">Systems</a>
+    <a class="n" href="about.html" aria-current="page">About</a>
+    <a class="n" href="work.html">Work</a>
+    <a class="nav-cta" href="book.html">Book a call</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding-bottom:32px">
+  <div class="wrap">
+    <span class="lab">About</span>
+    <h1 style="max-width:19ch">The strategy and the build come from the same person.</h1>
+    <p class="lede">
+      Most businesses choose between someone who advises but can't implement, and someone who
+      implements but doesn't understand how a sale actually happens. I spent four years doing
+      the first, then learned to do the second, because the advice kept dying at the point
+      where somebody had to build the thing.
+    </p>
+  </div>
+</section>
+
+<section class="band tight">
+  <div class="wrap">
+    <div class="grid split">
+      <div>
+        <h2 class="mb16">How I got here</h2>
+        <p class="mb16">
+          I spent years running commercial operations across international marketplaces —
+          sourcing, compliance, paid campaigns, account health. Detailed, unglamorous work
+          where a small process failure compounds quietly until it's expensive.
+        </p>
+        <p class="mb16">
+          Alongside that I've advised American small business owners and founders on growth
+          since 2022. The same problem came up again and again, in businesses that had nothing
+          else in common: leads arriving faster than anyone could answer them, and no system
+          underneath to catch the ones that slipped.
+        </p>
+        <p class="mb16">
+          Advice alone never fixed it. The recommendation would be right and then nothing
+          would happen, because implementing it meant somebody building something. So I
+          learned to build it.
+        </p>
+        <p>
+          Today that means workflow automation, CRM logic, and AI systems that run without
+          someone watching every step. The strategy still comes first — the build is just how
+          it gets delivered instead of discussed.
+        </p>
+      </div>
+      <div class="card">
+        <span class="lab">Where I work from</span>
+        <h3 class="mb16">Mississauga, Ontario</h3>
+        <p class="mb16">Working with businesses across Canada and the United States. Remote by default — everything here is set up and run without needing to be in the room.</p>
+        <table>
+          <tbody>
+            <tr><td>Languages</td><td class="sub">English, Urdu, Punjabi</td></tr>
+            <tr><td>Education</td><td class="sub">MSc Analytical Chemistry<br>BSc Physics, Chemistry &amp; Mathematics</td></tr>
+            <tr><td>Certified</td><td class="sub">Prompt Design in Vertex AI<br>Python for Data Science</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sheet mb32"><span class="lab">Track record</span><span class="rule"></span></div>
+    <div class="tl">
+      <div class="tl-item">
+        <span class="when">MAY 2026 &mdash; PRESENT</span>
+        <h3>Social Impact Advisor in Residence</h3>
+        <div class="org">Ontario Digital Academy &middot; Mississauga</div>
+        <p>Advising social entrepreneurs and non-profit leaders on using automation to remove administrative bottlenecks, so small teams spend their time on the work rather than the admin around it. Both systems on this site were built and are run here first.</p>
+      </div>
+      <div class="tl-item">
+        <span class="when">DEC 2022 &mdash; PRESENT</span>
+        <h3>Business Growth Advisor</h3>
+        <div class="org">JV Genius &middot; Atlanta, Georgia</div>
+        <p>Strategic growth reviews for American small business owners, CEOs and founders — working with commercial real estate investors and publicity partners on lead generation, relationship building, and making revenue predictable rather than lumpy.</p>
+      </div>
+      <div class="tl-item">
+        <span class="when">JAN 2024 &mdash; MAY 2026</span>
+        <h3>Account Manager &amp; E-Commerce Consultant</h3>
+        <div class="org">Global marketplaces &middot; US, UK, Germany</div>
+        <p>End-to-end commercial operations across international marketplaces: sourcing pipelines, marketplace compliance, and targeted paid campaigns to rank listings and protect account health.</p>
+      </div>
+      <div class="tl-item">
+        <span class="when">JUN 2022 &mdash; JUN 2024</span>
+        <h3>Business Manager</h3>
+        <div class="org">EWORLDZ LLC &middot; Austin, Texas</div>
+        <p>Operational workflows and commercial management across a wholesale business — aligning metrics with analytics to keep platform compliance and multi-channel operations in balance.</p>
+      </div>
+      <div class="tl-item">
+        <span class="when">OCT 2021 &mdash; MAY 2026</span>
+        <h3>Amazon FBA Consultant</h3>
+        <div class="org">United Kingdom</div>
+        <p>Wholesale and private label across US, UK and German marketplaces. Product and competitor research, sourcing, listing optimization, PPC campaigns, inventory and account health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-ink">
+  <div class="wrap">
+    <div class="grid split">
+      <div>
+        <h2 class="mb16">How I'd rather work</h2>
+        <p style="font-size:16px">
+          I'd rather tell you something isn't worth doing than build it and invoice you for it.
+          If your enquiry volume is too low for this to pay for itself, that's a two-minute
+          conversation and we both save a month.
+        </p>
+      </div>
+      <div>
+        <h3 class="mb8">Small on purpose, for now</h3>
+        <p style="font-size:15.5px">
+          I'm taking on a small number of businesses. That's partly honesty about where I am
+          and partly deliberate — a system like this needs someone paying attention in the
+          first months, and that's not possible across thirty accounts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap center">
+    <h2 class="mb16">Twenty-five minutes, no pitch deck.</h2>
+    <p class="lede" style="margin:0 auto 28px">Bring your numbers. I'll tell you straight whether this is worth doing.</p>
+    <a class="btn" href="book.html">Book a call</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Contact</h4>
+        <div class="sig">
+          <strong>Muhammad Farooq Iqbal</strong>
+          Social Impact Advisor in Residence<br>
+          Ontario Digital Academy<br>
+          <a href="tel:+14168346383" style="display:inline;padding:0">416-834-6383</a><br>
+          <a href="mailto:farooq@ontariodigitalacademy.org" style="display:inline;padding:0">farooq@ontariodigitalacademy.org</a>
+        </div>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="systems.html">Systems</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="book.html">Book a call</a>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/in/farooqicbal" rel="noopener">LinkedIn</a>
+        <a href="mailto:farooqicbal@gmail.com">farooqicbal@gmail.com</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Muhammad Farooq Iqbal</span>
+      <span>Mississauga, Ontario, Canada</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

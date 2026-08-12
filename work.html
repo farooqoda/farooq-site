@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — Muhammad Farooq Iqbal</title>
+<meta name="description" content="Two systems built and run for my own organization: an advisory board recruitment campaign, and a live multi-channel lead response system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================================
+   Muhammad Farooq Iqbal — site stylesheet
+   Design system carried from the existing portfolio: a technical-drawing
+   aesthetic. Sheet numbers, mono labels, hairline rules. It signals
+   engineering discipline without having to claim it — and nothing else in
+   this market looks like it.
+   ========================================================================== */
+
+:root{
+  --ink:#16233F;
+  --ink-2:#2A3A5C;
+  --paper:#F7FAFC;
+  --card:#FFFFFF;
+  --line:#C9D6E6;
+  --line-soft:#DEE7F0;
+  --muted:#56698A;
+  --teal:#1F6E63;
+  --teal-soft:#E4F0EE;
+  --signal:#E1591F;
+
+  --sans:'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --display:'Space Grotesk', var(--sans);
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+
+  --gut:clamp(20px, 5vw, 64px);
+  --max:1180px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- the blueprint label: used everywhere ---------- */
+.lab{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:500;
+}
+.lab.teal{color:var(--teal)}
+
+/* ---------- skip link ---------- */
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--ink);color:#fff;padding:12px 18px;
+  font-family:var(--mono);font-size:12px;
+}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- header ---------- */
+header{
+  border-bottom:1px solid var(--line);
+  background:rgba(247,250,252,.92);
+  backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:40;
+}
+.nav{
+  display:flex;align-items:center;gap:28px;
+  padding:16px var(--gut);max-width:var(--max);margin:0 auto;
+}
+.mark{
+  font-family:var(--mono);font-size:13px;font-weight:500;
+  letter-spacing:.04em;color:var(--ink);text-decoration:none;
+  margin-right:auto;display:flex;align-items:baseline;gap:9px;
+}
+.mark b{font-weight:500;color:var(--teal)}
+.mark span{color:var(--muted);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.nav a.n{
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  padding-bottom:3px;border-bottom:1px solid transparent;
+}
+.nav a.n:hover,.nav a.n[aria-current="page"]{color:var(--ink);border-bottom-color:var(--signal)}
+.nav a.n:focus-visible,a:focus-visible,button:focus-visible,
+input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--teal);outline-offset:3px;border-radius:2px;
+}
+.nav-cta{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--ink);color:#fff;text-decoration:none;
+  padding:10px 16px;border-radius:3px;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--teal)}
+@media (max-width:800px){
+  .nav{gap:16px;flex-wrap:wrap}
+  .nav a.n{font-size:11px}
+  .mark span{display:none}
+}
+
+/* ---------- sheet rule: the signature device ---------- */
+.sheet{
+  display:flex;align-items:center;gap:14px;
+  padding:22px 0 0;border-top:1px solid var(--line);
+  margin-top:0;
+}
+.sheet .lab{white-space:nowrap}
+.sheet .rule{flex:1;height:1px;background:var(--line)}
+
+/* ---------- sections ---------- */
+section{padding:clamp(56px,8vw,104px) 0}
+section.tight{padding:clamp(40px,6vw,68px) 0}
+.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band-ink{background:var(--ink);color:#EAF0F6}
+.band-ink .lab{color:#8FA3BE}
+.band-ink h2,.band-ink h3{color:#fff}
+.band-ink p{color:#C4D2E2}
+
+/* ---------- type ---------- */
+h1{
+  font-family:var(--display);
+  font-size:clamp(32px,5.6vw,58px);
+  line-height:1.06;letter-spacing:-.03em;font-weight:500;
+}
+h2{
+  font-family:var(--display);
+  font-size:clamp(24px,3.4vw,36px);
+  line-height:1.16;letter-spacing:-.02em;font-weight:500;
+}
+h3{
+  font-family:var(--display);
+  font-size:clamp(18px,2.2vw,22px);
+  line-height:1.25;letter-spacing:-.01em;font-weight:500;
+}
+p{max-width:64ch}
+.lede{font-size:clamp(17px,2.1vw,20px);line-height:1.6;color:var(--ink-2);max-width:60ch}
+.sub{color:var(--muted)}
+a{color:var(--teal)}
+strong{font-weight:600}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(56px,9vw,116px) 0 clamp(44px,6vw,72px)}
+.hero h1{max-width:17ch;margin:20px 0 22px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero .lede{margin-bottom:32px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-block;font-family:var(--mono);font-size:12.5px;
+  letter-spacing:.07em;text-transform:uppercase;text-decoration:none;
+  padding:14px 24px;border-radius:3px;border:1px solid var(--ink);
+  background:var(--ink);color:#fff;cursor:pointer;
+}
+.btn:hover{background:var(--teal);border-color:var(--teal)}
+.btn.ghost{background:none;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.light:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+
+/* ---------- grids ---------- */
+.grid{display:grid;gap:clamp(20px,3vw,34px)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.split{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:start}
+@media (max-width:900px){
+  .g3,.g4,.split{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr}
+}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:4px;padding:clamp(22px,3vw,32px);
+}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:15.5px}
+.card .lab{display:block;margin-bottom:14px}
+.card ul{margin:16px 0 0;padding-left:0;list-style:none}
+.card li{
+  font-size:14.5px;color:var(--ink-2);padding:7px 0 7px 20px;
+  position:relative;border-top:1px solid var(--line-soft);
+}
+.card li:first-child{border-top:0}
+.card li::before{
+  content:"";position:absolute;left:2px;top:16px;
+  width:6px;height:1px;background:var(--signal);
+}
+
+/* numbered step */
+.step{position:relative;padding-left:52px}
+.step .n{
+  position:absolute;left:0;top:2px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.1em;
+  color:var(--signal);
+}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{font-size:15px;color:var(--ink-2);max-width:44ch}
+
+/* ---------- stat / figure ---------- */
+.fig{border-left:2px solid var(--signal);padding-left:18px}
+.fig .v{
+  font-family:var(--mono);font-size:clamp(26px,3.6vw,38px);
+  font-weight:500;letter-spacing:-.02em;line-height:1.1;
+}
+.fig .k{font-size:14px;color:var(--muted);margin-top:6px;max-width:30ch}
+
+/* ---------- message demo ---------- */
+.thread{
+  background:var(--card);border:1px solid var(--line);border-radius:4px;
+  padding:20px;display:flex;flex-direction:column;gap:10px;
+}
+.thread .hd{
+  display:flex;align-items:center;gap:8px;
+  padding-bottom:14px;margin-bottom:4px;border-bottom:1px solid var(--line-soft);
+}
+.msg{max-width:80%;padding:11px 15px;border-radius:12px;font-size:15px;line-height:1.5}
+.msg.them{background:#EDF2F7;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.us{background:var(--teal);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg .t{
+  display:block;font-family:var(--mono);font-size:10px;
+  opacity:.6;margin-top:6px;letter-spacing:.06em;
+}
+
+/* ---------- table ---------- */
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:0 14px 10px 0;font-weight:500;
+  border-bottom:1px solid var(--line);
+}
+td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line-soft);font-size:15px;vertical-align:top}
+td:first-child{font-weight:500}
+tr:last-child td{border-bottom:0}
+
+/* ---------- timeline ---------- */
+.tl{border-left:1px solid var(--line);padding-left:26px;margin-left:6px}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-31px;top:7px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--teal);
+}
+.tl-item .when{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.tl-item h3{font-size:17px;margin:4px 0 2px}
+.tl-item .org{font-size:14.5px;color:var(--teal);margin-bottom:7px}
+.tl-item p{font-size:15px;color:var(--ink-2);max-width:58ch}
+
+/* ---------- forms ---------- */
+.field{margin-bottom:20px}
+.field label{display:block;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);
+  border-radius:3px;font-family:var(--sans);font-size:15.5px;
+  color:var(--ink);background:var(--card);
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal)}
+.field .hint{font-size:13px;color:var(--muted);margin-top:6px}
+.consent{display:flex;gap:11px;align-items:flex-start;margin:22px 0}
+.consent input{width:16px;height:16px;margin-top:3px;flex:0 0 16px}
+.consent label{font-size:13.5px;color:var(--muted);line-height:1.5;max-width:58ch}
+.form-note{
+  background:var(--teal-soft);border-left:2px solid var(--teal);
+  padding:15px 18px;font-size:14.5px;color:var(--ink-2);margin-bottom:26px;
+}
+
+/* ---------- faq ---------- */
+details{border-bottom:1px solid var(--line-soft);padding:18px 0}
+details:first-of-type{border-top:1px solid var(--line-soft)}
+summary{
+  font-family:var(--display);font-size:17px;font-weight:500;
+  cursor:pointer;list-style:none;display:flex;gap:14px;align-items:flex-start;
+}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";color:var(--signal);font-family:var(--mono);font-size:16px;line-height:1.4}
+details[open] summary::before{content:"–"}
+details p{margin:12px 0 0 28px;font-size:15.5px;color:var(--ink-2)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--card)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+@media (max-width:800px){.foot{grid-template-columns:1fr}}
+.foot h4{font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:14px}
+.foot a{display:block;color:var(--ink-2);text-decoration:none;font-size:15px;padding:4px 0}
+.foot a:hover{color:var(--teal)}
+.sig{font-size:14.5px;color:var(--ink-2);line-height:1.7}
+.sig strong{display:block;color:var(--ink);font-size:15.5px}
+.foot-base{
+  margin-top:34px;padding-top:20px;border-top:1px solid var(--line-soft);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em;
+}
+
+/* ---------- utility ---------- */
+.mb0{margin-bottom:0}
+.mb8{margin-bottom:8px}
+.mb16{margin-bottom:16px}
+.mb24{margin-bottom:24px}
+.mb32{margin-bottom:32px}
+.mt24{margin-top:24px}
+.mt32{margin-top:32px}
+.center{text-align:center}
+.narrow{max-width:66ch}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="nav">
+    <a class="mark" href="index.html"><b>FI</b> /<span>Farooq Iqbal</span></a>
+    <a class="n" href="index.html">Home</a>
+    <a class="n" href="systems.html">Systems</a>
+    <a class="n" href="about.html">About</a>
+    <a class="n" href="work.html" aria-current="page">Work</a>
+    <a class="nav-cta" href="book.html">Book a call</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" style="padding-bottom:32px">
+  <div class="wrap">
+    <span class="lab">Work</span>
+    <h1 style="max-width:19ch">Built for my own organization first.</h1>
+    <p class="lede">
+      I don't have a client logo wall, and I'd rather say that than manufacture one. What I
+      have is two systems I built, run, and depend on myself — which is a harder test than a
+      pilot someone else paid for.
+    </p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sheet mb32"><span class="lab">Case &mdash; 01</span><span class="rule"></span></div>
+    <div class="grid split mb32">
+      <div>
+        <h2 class="mb16">Recruiting an advisory board of tenured professors</h2>
+        <p class="lede mb24">
+          A non-profit needed senior academics on its advisory board. Tenured professors are
+          one of the hardest audiences to reach cold — high volume of requests, low tolerance
+          for anything generic, and no incentive to reply.
+        </p>
+        <p class="mb16" style="font-size:15.5px">
+          Sending the same message to everyone was never going to work. Writing a genuinely
+          researched approach for each person, by hand, would have taken weeks nobody had.
+        </p>
+        <p class="sub" style="font-size:15.5px">
+          So the research and the drafting were automated, and the judgement was not. Each
+          prospect's public profile was read, an approach written specific to their field and
+          their department, and supporting material generated to match. The one step that
+          stayed human was the conversation itself.
+        </p>
+      </div>
+      <div class="card">
+        <span class="lab">What ran automatically</span>
+        <ul>
+          <li>Profile read and background researched, per person</li>
+          <li>An approach written for their specific field, not a template</li>
+          <li>Supporting material built to match their department</li>
+          <li>Everything filed — spreadsheet, CRM record, per-person folder</li>
+          <li>Sequencing paced so nothing looked mass-sent</li>
+        </ul>
+        <h3 class="mt32 mb8" style="font-size:16px">What stayed human</h3>
+        <p style="font-size:15px">Every reply was read by a person. Every conversation was had by a person. The system did the preparation, not the relationship.</p>
+      </div>
+    </div>
+    <div class="card" style="border-left:2px solid var(--signal)">
+      <p style="font-size:15px">
+        <strong>Where this is honest:</strong> this was work for an organization I'm part of,
+        not a paying external client. I'm showing it because it demonstrates the approach on a
+        genuinely difficult audience — and because I'd rather show you real internal work than
+        dress up a hypothetical as a case study.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sheet mb32"><span class="lab">Case &mdash; 02</span><span class="rule"></span></div>
+    <div class="grid split">
+      <div>
+        <h2 class="mb16">The lead response system, running on itself</h2>
+        <p class="lede mb24">
+          Seven channels in, one conversation history per person, bookings written to a real
+          calendar, and follow-up that continues until there's an answer either way.
+        </p>
+        <p class="mb16" style="font-size:15.5px">
+          It has been running since May 2026. Not as a demo — as the thing that actually
+          handles enquiries, including the one that booked this call if you book one.
+        </p>
+        <p class="sub" style="font-size:15.5px">
+          The booking flow on this website is the same system. The confirmation you get, the
+          reminder before the call, the recap afterwards — that's the product, not a
+          description of it.
+        </p>
+      </div>
+      <div class="card">
+        <span class="lab">Worth knowing</span>
+        <h3 class="mb16">What I learned building it</h3>
+        <p class="mb16" style="font-size:15px">
+          <strong>Answering is easy. Persisting is the product.</strong> Almost every tool on
+          the market replies once and stops. The bookings come from the third and fourth
+          message, and building those properly took longer than building the first.
+        </p>
+        <p class="mb16" style="font-size:15px">
+          <strong>The interesting failures are silent.</strong> Things that ran, reported
+          success, and did the wrong thing — a reminder timed from the wrong date, an alert
+          that re-fired every hour. Those were found by systematic review, not by anything
+          breaking.
+        </p>
+        <p style="font-size:15px">
+          <strong>Restraint has to be built in.</strong> Caps on messages, consent checked
+          before every send, a hard stop the moment someone replies. If those are optional,
+          they eventually get skipped.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-ink">
+  <div class="wrap center">
+    <h2 class="mb16">The next case study has a client's name on it.</h2>
+    <p class="lede" style="margin:0 auto 28px;color:#C4D2E2">
+      I'm taking on a small number of businesses now. Early ones get more of my attention than
+      later ones will, and I'll be straight with you about whether it's worth doing at all.
+    </p>
+    <a class="btn light" href="book.html">Book a call</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Contact</h4>
+        <div class="sig">
+          <strong>Muhammad Farooq Iqbal</strong>
+          Social Impact Advisor in Residence<br>
+          Ontario Digital Academy<br>
+          <a href="tel:+14168346383" style="display:inline;padding:0">416-834-6383</a><br>
+          <a href="mailto:farooq@ontariodigitalacademy.org" style="display:inline;padding:0">farooq@ontariodigitalacademy.org</a>
+        </div>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="systems.html">Systems</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="book.html">Book a call</a>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/in/farooqicbal" rel="noopener">LinkedIn</a>
+        <a href="mailto:farooqicbal@gmail.com">farooqicbal@gmail.com</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Muhammad Farooq Iqbal</span>
+      <span>Mississauga, Ontario, Canada</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
