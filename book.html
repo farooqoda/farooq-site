@@ -9,14 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 <style>
-/* ============================================================================
-   Muhammad Farooq Iqbal — site stylesheet
-   Design system carried from the existing portfolio: a technical-drawing
-   aesthetic. Sheet numbers, mono labels, hairline rules. It signals
-   engineering discipline without having to claim it — and nothing else in
-   this market looks like it.
-   ========================================================================== */
-
 :root{
   --ink:#16233F;
   --ink-2:#2A3A5C;
@@ -54,7 +46,6 @@ body{
 
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 
-/* ---------- the blueprint label: used everywhere ---------- */
 .lab{
   font-family:var(--mono);
   font-size:11px;
@@ -65,7 +56,6 @@ body{
 }
 .lab.teal{color:var(--teal)}
 
-/* ---------- skip link ---------- */
 .skip{
   position:absolute;left:-9999px;top:0;z-index:100;
   background:var(--ink);color:#fff;padding:12px 18px;
@@ -73,7 +63,6 @@ body{
 }
 .skip:focus{left:8px;top:8px}
 
-/* ---------- header ---------- */
 header{
   border-bottom:1px solid var(--line);
   background:rgba(247,250,252,.92);
@@ -113,7 +102,6 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
   .mark span{display:none}
 }
 
-/* ---------- sheet rule: the signature device ---------- */
 .sheet{
   display:flex;align-items:center;gap:14px;
   padding:22px 0 0;border-top:1px solid var(--line);
@@ -122,7 +110,6 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
 .sheet .lab{white-space:nowrap}
 .sheet .rule{flex:1;height:1px;background:var(--line)}
 
-/* ---------- sections ---------- */
 section{padding:clamp(56px,8vw,104px) 0}
 section.tight{padding:clamp(40px,6vw,68px) 0}
 .band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -131,7 +118,6 @@ section.tight{padding:clamp(40px,6vw,68px) 0}
 .band-ink h2,.band-ink h3{color:#fff}
 .band-ink p{color:#C4D2E2}
 
-/* ---------- type ---------- */
 h1{
   font-family:var(--display);
   font-size:clamp(32px,5.6vw,58px);
@@ -153,14 +139,12 @@ p{max-width:64ch}
 a{color:var(--teal)}
 strong{font-weight:600}
 
-/* ---------- hero ---------- */
 .hero{padding:clamp(56px,9vw,116px) 0 clamp(44px,6vw,72px)}
 .hero h1{max-width:17ch;margin:20px 0 22px}
 .hero h1 em{font-style:normal;color:var(--teal)}
 .hero .lede{margin-bottom:32px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
-/* ---------- buttons ---------- */
 .btn{
   display:inline-block;font-family:var(--mono);font-size:12.5px;
   letter-spacing:.07em;text-transform:uppercase;text-decoration:none;
@@ -173,7 +157,6 @@ strong{font-weight:600}
 .btn.light{background:#fff;color:var(--ink);border-color:#fff}
 .btn.light:hover{background:var(--teal);border-color:var(--teal);color:#fff}
 
-/* ---------- grids ---------- */
 .grid{display:grid;gap:clamp(20px,3vw,34px)}
 .g2{grid-template-columns:repeat(2,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
@@ -184,7 +167,6 @@ strong{font-weight:600}
   .g2{grid-template-columns:1fr}
 }
 
-/* ---------- cards ---------- */
 .card{
   background:var(--card);border:1px solid var(--line);
   border-radius:4px;padding:clamp(22px,3vw,32px);
@@ -203,7 +185,6 @@ strong{font-weight:600}
   width:6px;height:1px;background:var(--signal);
 }
 
-/* numbered step */
 .step{position:relative;padding-left:52px}
 .step .n{
   position:absolute;left:0;top:2px;
@@ -213,7 +194,6 @@ strong{font-weight:600}
 .step h3{font-size:18px;margin-bottom:6px}
 .step p{font-size:15px;color:var(--ink-2);max-width:44ch}
 
-/* ---------- stat / figure ---------- */
 .fig{border-left:2px solid var(--signal);padding-left:18px}
 .fig .v{
   font-family:var(--mono);font-size:clamp(26px,3.6vw,38px);
@@ -221,7 +201,6 @@ strong{font-weight:600}
 }
 .fig .k{font-size:14px;color:var(--muted);margin-top:6px;max-width:30ch}
 
-/* ---------- message demo ---------- */
 .thread{
   background:var(--card);border:1px solid var(--line);border-radius:4px;
   padding:20px;display:flex;flex-direction:column;gap:10px;
@@ -238,7 +217,6 @@ strong{font-weight:600}
   opacity:.6;margin-top:6px;letter-spacing:.06em;
 }
 
-/* ---------- table ---------- */
 table{width:100%;border-collapse:collapse;margin-top:8px}
 th{
   font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
@@ -249,7 +227,6 @@ td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line-soft);font-size:1
 td:first-child{font-weight:500}
 tr:last-child td{border-bottom:0}
 
-/* ---------- timeline ---------- */
 .tl{border-left:1px solid var(--line);padding-left:26px;margin-left:6px}
 .tl-item{position:relative;padding-bottom:30px}
 .tl-item:last-child{padding-bottom:0}
@@ -263,7 +240,6 @@ tr:last-child td{border-bottom:0}
 .tl-item .org{font-size:14.5px;color:var(--teal);margin-bottom:7px}
 .tl-item p{font-size:15px;color:var(--ink-2);max-width:58ch}
 
-/* ---------- forms ---------- */
 .field{margin-bottom:20px}
 .field label{display:block;margin-bottom:7px}
 .field input,.field select,.field textarea{
@@ -281,7 +257,24 @@ tr:last-child td{border-bottom:0}
   padding:15px 18px;font-size:14.5px;color:var(--ink-2);margin-bottom:26px;
 }
 
-/* ---------- faq ---------- */
+/* GHL form container — the embed's own style="height:100%" does nothing
+   unless the parent has an explicit height, so this wrapper gives it one
+   (matching the form's own data-height) and keeps the same card look as
+   the rest of the page instead of the iframe floating with no border. */
+.ghl-form-wrap{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:4px;
+  overflow:hidden;
+}
+.ghl-form-wrap iframe{
+  display:block;
+  width:100%;
+  height:948px;
+  border:none;
+}
+
 details{border-bottom:1px solid var(--line-soft);padding:18px 0}
 details:first-of-type{border-top:1px solid var(--line-soft)}
 summary{
@@ -293,7 +286,6 @@ summary::before{content:"+";color:var(--signal);font-family:var(--mono);font-siz
 details[open] summary::before{content:"–"}
 details p{margin:12px 0 0 28px;font-size:15.5px;color:var(--ink-2)}
 
-/* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--card)}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
 @media (max-width:800px){.foot{grid-template-columns:1fr}}
@@ -309,7 +301,6 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--car
   font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em;
 }
 
-/* ---------- utility ---------- */
 .mb0{margin-bottom:0}
 .mb8{margin-bottom:8px}
 .mb16{margin-bottom:16px}
@@ -363,52 +354,28 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--car
           are sent by the same system this page is about. You'll have used it before we speak.
         </div>
 
-        <form id="bookForm" novalidate>
-          <div class="field">
-            <label class="lab" for="name">Your name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label class="lab" for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label class="lab" for="kind">What kind of business</label>
-            <select id="kind" name="kind" required>
-              <option value="">Choose one</option>
-              <option>Clinic or dental practice</option>
-              <option>Home services (HVAC, plumbing, roofing, electrical)</option>
-              <option>Law firm</option>
-              <option>Real estate</option>
-              <option>Coaching or consulting</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field">
-            <label class="lab" for="volume">Roughly how many enquiries a month</label>
-            <select id="volume" name="volume" required>
-              <option value="">Choose one</option>
-              <option>Under 20</option>
-              <option>20 to 50</option>
-              <option>50 to 150</option>
-              <option>150 to 500</option>
-              <option>More than 500</option>
-              <option>Honestly, no idea</option>
-            </select>
-            <div class="hint">A guess is fine. "No idea" is a useful answer in itself.</div>
-          </div>
-
-          <div class="consent">
-            <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">
-              I'm happy to be contacted by email and text about this enquiry. I can opt out at
-              any time, and my details won't be shared with anyone else.
-            </label>
-          </div>
-
-          <button type="submit" class="btn" id="submitBtn">Request a time</button>
-          <p class="hint mt24" id="formMsg" role="status" aria-live="polite"></p>
-        </form>
+        <!-- GHL embedded form, wrapped to match the site's card styling -->
+        <div class="ghl-form-wrap">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/kOVF2l8LYjk6ZB88R3FI"
+            id="inline-kOVF2l8LYjk6ZB88R3FI"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="website form"
+            data-height="948"
+            data-layout-iframe-id="inline-kOVF2l8LYjk6ZB88R3FI"
+            data-form-id="kOVF2l8LYjk6ZB88R3FI"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="website form"
+          ></iframe>
+        </div>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
       </div>
 
       <div>
@@ -446,56 +413,6 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--car
   </div>
 </section>
 
-<script>
-/* The form posts to the orchestrator's web-chat webhook, so an enquiry from
-   this page enters the same pipeline as every other channel. Replace
-   ENDPOINT and WIDGET_KEY with the live values before publishing. */
-var ENDPOINT = 'https://YOUR-N8N-HOST/webhook/web-chat';
-var WIDGET_KEY = 'YOUR_WEB_WIDGET_KEY';
-
-document.getElementById('bookForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  var f = e.target, msg = document.getElementById('formMsg'), btn = document.getElementById('submitBtn');
-
-  if (!f.checkValidity()) {
-    msg.textContent = 'Please fill in every field and tick the consent box.';
-    f.reportValidity();
-    return;
-  }
-
-  btn.disabled = true;
-  msg.textContent = 'Sending\u2026';
-
-  var body = {
-    widget_key: WIDGET_KEY,
-    session_key: 'book-' + Date.now().toString(36),
-    name: f.name.value.trim(),
-    email: f.email.value.trim(),
-    page_url: location.href,
-    message: 'Call request from the website. Business type: ' + f.kind.value +
-             '. Monthly enquiry volume: ' + f.volume.value + '. Consent given for email and SMS.'
-  };
-
-  try {
-    var res = await fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-    if (!res.ok) throw new Error('bad status');
-    f.style.display = 'none';
-    msg.style.fontSize = '16px';
-    msg.style.color = 'var(--teal)';
-    msg.textContent = 'Got it \u2014 check your email in the next minute or two. If nothing arrives, ' +
-                      'email farooq@ontariodigitalacademy.org and I will pick it up directly.';
-  } catch (err) {
-    btn.disabled = false;
-    msg.textContent = 'That did not send. Email farooq@ontariodigitalacademy.org or call 416-834-6383 ' +
-                      'and I will book you in directly.';
-  }
-});
-</script>
-
 </main>
 
 <footer>
@@ -529,6 +446,11 @@ document.getElementById('bookForm').addEventListener('submit', async function (e
       <span>&copy; 2026 Muhammad Farooq Iqbal</span>
       <span>Mississauga, Ontario, Canada</span>
     </div>
+  </div>
+</footer>
+
+</body>
+</html>
   </div>
 </footer>
 
