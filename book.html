@@ -275,17 +275,17 @@ tr:last-child td{border-bottom:0}
   border:none;
 }
 
-.ghl-calendar-wrap{
+.calendar-wrap{
   background:var(--card);
   border:1px solid var(--line);
   border-radius:4px;
   padding:4px;
   overflow:hidden;
 }
-.ghl-calendar-wrap iframe{
+.calendar-wrap iframe{
   display:block;
   width:100%;
-  height:780px;
+  height:700px;
   border:none;
 }
 
@@ -423,17 +423,13 @@ footer{border-top:1px solid var(--line);padding:44px 0 36px;background:var(--car
           </div>
         </div>
 
-        <!-- GHL calendar embed — lets the visitor pick their own date/time -->
-        <div class="ghl-calendar-wrap">
+        <!-- Google Calendar appointment booking — lets the visitor pick their own date/time -->
+        <div class="calendar-wrap">
           <iframe
-            src="https://api.leadconnectorhq.com/widget/booking/wBbhILS8hLVhL1ZPCbuL"
-            allow="payment"
-            scrolling="no"
-            id="wBbhILS8hLVhL1ZPCbuL_1788689187284"
+            src="https://calendar.app.google/K1ZqJs74mC46vhCj7"
             title="Book a time"
           ></iframe>
         </div>
-        <script src="https://api.leadconnectorhq.com/js/form_embed.js" type="text/javascript"></script>
       </div>
     </div>
   </div>
